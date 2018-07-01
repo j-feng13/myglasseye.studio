@@ -1,13 +1,13 @@
 
 ## S3 Static hosting 6/30
-### Setup Buckets
+### Setup Website Buckets
 1. Requirements `index.html` and `error.html` + a domain 
 2. Setup Buckets
 	* Create two buckets `domainname.tld` and `www.domainname.tld` 
 	* Enable static hosting for `domainname.tld` in the s3 console and set `index.html` and `error.html`
 	* Enable static hosting for `www.domainname.tld` and redirect requests to `domainname.tld`
 	* Upload `index.html` and `error.html` to bucket `domainname.tld`
-3. Switch Domain
+3. Switch DNS Providers
 	* Copy DNS Records from gandi.net
 	* Create a hosted zone in Route53 called `domainname.tld`
 	* `Import Zone File`
