@@ -16,3 +16,10 @@
 		1. Name: _blank_ Type: A. Alias: Yes. Value: AWS Region (Ohio East)
 		2. Name: _www_ Type: A. Alias: Yes. Value: AWS Region (Ohio East)
 	* Copy AWS Name server to gandi under Domain -> Nameservers (not DNS Records)
+
+### Link CSS and JS Files
+1. Create `styles.css` and `app.js`
+2. Add `<link>` and `<script>` tags to `index.html`
+	* `link href="styles.css"`
+	* `script src="app.js"`
+3. Upload new `index.html` and `styles.css` and `app.js`
