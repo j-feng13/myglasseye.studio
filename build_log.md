@@ -47,4 +47,5 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 	* `curl https://sh.rustup.rs -sSf | sh`
 2. Create a new repo `rusty_photo_uploader`
 3. Initialize the project
-	* `
+	* `cargo init --bin rusty_photo_uploader`
+4.
