@@ -45,4 +45,6 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 ### Create Rust executable
 1. Install `rustup`
 	* `curl https://sh.rustup.rs -sSf | sh`
-2. Initialize a project
+2. Create a new repo `rusty_photo_uploader`
+3. Initialize the project
+	* `
