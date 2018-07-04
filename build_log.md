@@ -14,7 +14,7 @@
 	* Delete the previous A Records
 	* Create two new record sets
 		1. Name: _blank_ Type: A. Alias: Yes. Value: AWS Region (Ohio East)
-		2. Name: _www_ Type: A. Alias: Yes. Value: AWS Region (Ohio East)
+		2. Name: _www_ Type: A. Alias: Yes. Value: AWS Region (Ohio East) [Removed]
 	* Copy AWS Name server to gandi under Domain -> Nameservers (not DNS Records)
 
 ### Create Image Bucket
@@ -32,7 +32,7 @@
 	* Add `domainname.tld` as the CNAME
 	* Set the S3 bucket address as the path
 	* In Route53, change the A name record to point to the Cloudfront distribution
-	* the WWW A name can continue to point to the bucket because it's forwarder anyway
+	* the WWW A name can continue to point to the bucket because it's forwarder anyway [Removed]
 2. Create a Cloudfront distribution for `domainname.tld.studios`
 	* Add `images.domainname.tld` as the CNAME
 	* In Route53, add a CNAME `images.domainname.tld` to the Cloudfront distribuation address of the photo bucket
