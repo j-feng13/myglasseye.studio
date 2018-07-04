@@ -1,4 +1,3 @@
-
 ## S3 Static hosting 6/30
 ### Setup Website Buckets
 1. Requirements `index.html` and `error.html` + a domain 
@@ -42,3 +41,7 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 1. JSON will have links to each photo, possible link to photo before editing, and text description.
 2. Files will be limited to 100 entries
 3. A tool will generate the file after reading from a PostgreDB
+
+### Install PostgreSQL Ubuntu 16.04
+1. Install PostgreSQL and PostgreSQL-contrib
+	* `sudo apt-get update && sudo apt-get install postgresql postgresql-contrib`
