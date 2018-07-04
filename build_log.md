@@ -34,5 +34,11 @@
 	* In Route53, change the A name record to point to the Cloudfront distribution
 	* the WWW A name can continue to point to the bucket because it's forwarder anyway [Removed]
 2. Create a Cloudfront distribution for `domainname.tld.studios`
-	* Add `images.domainname.tld` as the CNAME
-	* In Route53, add a CNAME `images.domainname.tld` to the Cloudfront distribuation address of the photo bucket
+	* Add `photos.domainname.tld` as the CNAME
+	* In Route53, add a CNAME `photos.domainname.tld` to the Cloudfront distribuation address of the photo bucket
+
+## File/Description List 7/3
+A JSON file with images and text will be used instead of using API Gateway -> Lambda -> RDS to store images and text
+1. JSON will have links to each photo, possible link to photo before editing, and text description.
+2. Files will be limited to 100 entries
+3. A tool will generate the file after reading from a PostgreDB
