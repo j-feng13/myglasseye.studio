@@ -42,6 +42,20 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 2. Files will be limited to 100 entries
 3. A tool will generate the file after reading from a PostgreDB
 
+### Install PostgreSQL Ubuntu 16.04
+1. Install PostgreSQL and PostgreSQL-contrib
+	* `sudo apt-get update && sudo apt-get install postgresql postgresql-contrib`
+2. Secure default Postgresql user `postgres`
+	* `sudo passwd postgres`
+	* `su - postgres`
+	* `> psql -d template1 -c "ALTER USER postgres WITH PASSWORD `newpassword`"`
+3. Create a new user (Run as `postgres` user)
+	* `createuser _username_ --pwprompt`
+4. Create new database
+	* `createdb myglasseye`
+5. Run table create script
+	* `psql -f db/createTable.sql -d myglasseye`
+
 ### Create Rust executable
 1. Install `rustup`
 	* `curl https://sh.rustup.rs -sSf | sh`
@@ -49,3 +63,4 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 3. Initialize the project
 	* `cargo init --bin rusty_photo_uploader`
 4.
+
