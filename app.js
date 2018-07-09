@@ -1,7 +1,7 @@
 const PHOTO_URL = 'http://photos.myglasseye.studio';
 
 function getPhotoList(documentPath) {
-	return fetch(PHOTO_URL + documentPath, {
+	return fetch(documentPath, {
 		mode: "cors"
 	})
 	.then((response) => {
@@ -21,7 +21,7 @@ function createDivContainer(title, description, img) {
 
 function createImgEle(image) {
 	const img = document.createElement('img');
-	img.src = image;
+	img.src = PHOTO_URL + image;
 	img.crossorigin = 'anonymous'
 	return img;
 }
