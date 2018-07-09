@@ -5,7 +5,7 @@ function getPhotoList(documentPath) {
 		mode: "cors"
 	})
 	.then((response) => {
-		return JSON.parse(response.json());
+		return response.json();
 	});
 }
 
