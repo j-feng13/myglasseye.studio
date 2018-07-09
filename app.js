@@ -30,7 +30,7 @@ function renderPhotoList(targetElement, photoList) {
 	const fragment = document.createDocumentFragment();
 	photoList.map((photoItem) => {
 		const { image, title, description } = photoItem;
-		const img = createImageEle(image);
+		const img = createImgEle(image);
 		const container = createDivContainer(title, description, img);
 		fragment.appendChild(container);
 	});
