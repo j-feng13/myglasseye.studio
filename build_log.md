@@ -61,6 +61,14 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 	* `curl https://sh.rustup.rs -sSf | sh`
 2. Create a new repo `rusty_photo_uploader`
 3. Initialize the project
-	* `cargo init --bin rusty_photo_uploader`
-4.
+	* `cargo new --bin rusty_photo_uploader`
+4. Add the clap
+	* In Cargo.toml under [dependencies] `clap = "2.32"`
 
+## Do some front end MVP work 7/8
+
+### Change up DB a little
+1. `ALTER TABLE photos ADD COLUMN title varchar(50)`
+2. `ALTER TABLE photos RENAME COLUMN name TO image`
+3. `ALTER TABLE photos ALTER COLUMN image TYPE text`
+4. `ALTER TABLE photos ALTER COLUMN before_image TYPE text`

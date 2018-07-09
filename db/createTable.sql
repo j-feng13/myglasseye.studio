@@ -1,7 +1,8 @@
 CREATE TABLE photos (
 	id SERIAL PRIMARY KEY,
-	name varchar (50) UNIQUE,
-	before_image varchar (50),
+	image text UNIQUE,
+	before_image text,
 	description text,
+	title varchar(50),
 	created timestamp default current_timestamp
 )
