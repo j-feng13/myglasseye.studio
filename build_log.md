@@ -76,5 +76,6 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 ### Add some photos and a JSON file
 1. Uploaded a small selection of files to a folder `main_images` in the `myglasseye.studio.photos` bucket
 2. Created a JSON file with fields `image, title, description`
+3. Upload JSON file to `myglasseye.studio` bucket
 
 ### Begin the front end
