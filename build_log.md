@@ -1,4 +1,3 @@
-
 ## S3 Static hosting 6/30
 ### Setup Website Buckets
 1. Requirements `index.html` and `error.html` + a domain 
@@ -42,3 +41,34 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 1. JSON will have links to each photo, possible link to photo before editing, and text description.
 2. Files will be limited to 100 entries
 3. A tool will generate the file after reading from a PostgreDB
+
+### Install PostgreSQL Ubuntu 16.04
+1. Install PostgreSQL and PostgreSQL-contrib
+	* `sudo apt-get update && sudo apt-get install postgresql postgresql-contrib`
+2. Secure default Postgresql user `postgres`
+	* `sudo passwd postgres`
+	* `su - postgres`
+	* `> psql -d template1 -c "ALTER USER postgres WITH PASSWORD `newpassword`"`
+3. Create a new user (Run as `postgres` user)
+	* `createuser _username_ --pwprompt`
+4. Create new database
+	* `createdb myglasseye`
+5. Run table create script
+	* `psql -f db/createTable.sql -d myglasseye`
+
+### Create Rust executable
+1. Install `rustup`
+	* `curl https://sh.rustup.rs -sSf | sh`
+2. Create a new repo `rusty_photo_uploader`
+3. Initialize the project
+	* `cargo new --bin rusty_photo_uploader`
+4. Add the clap
+	* In Cargo.toml under [dependencies] `clap = "2.32"`
+
+## Do some front end MVP work 7/8
+
+### Change up DB a little
+1. `ALTER TABLE photos ADD COLUMN title varchar(50)`
+2. `ALTER TABLE photos RENAME COLUMN name TO image`
+3. `ALTER TABLE photos ALTER COLUMN image TYPE text`
+4. `ALTER TABLE photos ALTER COLUMN before_image TYPE text`
