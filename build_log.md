@@ -78,4 +78,7 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 2. Created a JSON file with fields `image, title, description`
 3. Upload JSON file to `myglasseye.studio` bucket
 
-### Begin the front end
+### Image Loading
+1. append relative url from json file to base url -> `http://photos.myglasseye.studio` + _relative_
+2. load and be thankful for cors
+3. invalidations are virtually free. feel free to use cloudfront invalidations (first 1k/month free)
