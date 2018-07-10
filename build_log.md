@@ -82,3 +82,12 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 1. append relative url from json file to base url -> `http://photos.myglasseye.studio` + _relative_
 2. load and be thankful for cors
 3. invalidations are virtually free. feel free to use cloudfront invalidations (first 1k/month free)
+
+
+## Styling 7/9
+### Create a header (I don't know why this is next)
+1. Make a header
+2. Use some JS to check if scrolled past header height
+3. Add a class if so. Remove otherwise
+4. Add a hover handler
+5. Make sure to move content down a bit at first to prevent overlapping
