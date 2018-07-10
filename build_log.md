@@ -72,3 +72,13 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 2. `ALTER TABLE photos RENAME COLUMN name TO image`
 3. `ALTER TABLE photos ALTER COLUMN image TYPE text`
 4. `ALTER TABLE photos ALTER COLUMN before_image TYPE text`
+
+### Add some photos and a JSON file
+1. Uploaded a small selection of files to a folder `main_images` in the `myglasseye.studio.photos` bucket
+2. Created a JSON file with fields `image, title, description`
+3. Upload JSON file to `myglasseye.studio` bucket
+
+### Image Loading
+1. append relative url from json file to base url -> `http://photos.myglasseye.studio` + _relative_
+2. load and be thankful for cors
+3. invalidations are virtually free. feel free to use cloudfront invalidations (first 1k/month free)
