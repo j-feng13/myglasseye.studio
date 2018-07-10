@@ -1,3 +1,30 @@
 body {
-	background-color: #f0f8ff
+	background-color: #f0f8ff;
+	margin: 0;
+}
+
+header {
+	display: flex;
+	height: 30px;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
+	transition: all 0.4s ease-in-out;
+	position: fixed;
+}
+
+header > .header_home {
+	flex-grow: 10;
+	align-self: flex-start;
+	padding: 0 1em;
+}
+
+header > .header_links {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+}
+
+.header_collapse {
+	height: 5px;
 }
