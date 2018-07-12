@@ -13,7 +13,6 @@ function createDivContainer(title, description, img) {
 	const div = document.createElement('div');
 	const headerText = document.createTextNode(title);
 	const descriptionText  = document.createTextNode(description);
-	div.classList.add('photoContainer')
 	div.appendChild(headerText);
 	div.appendChild(descriptionText);
 	div.appendChild(img);

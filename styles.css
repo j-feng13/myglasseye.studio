@@ -25,8 +25,3 @@ header > .header_links {
 	justify-content: space-around;
 	flex-direction: row;
 }
-
-.photoContainer > img {
-	height: 600px;
-	width: 800px;
-}
