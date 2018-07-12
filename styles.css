@@ -1,6 +1,7 @@
 body {
-	background-color: #f0f8ff;
+	background-color: #C9D8FF;
 	margin: 0;
+	color: #E8EEFF;
 }
 
 header {
@@ -11,6 +12,13 @@ header {
 	align-items: center;
 	transition: all 0.4s ease-in-out;
 	position: fixed;
+	overflow-y: hidden;
+	background-color: #74777F;
+}
+
+header:hover {
+	height: 30px;
+	border-bottom: none;
 }
 
 header > .header_home {
@@ -26,5 +34,12 @@ header > .header_links {
 }
 
 .header_collapse {
-	height: 5px;
+	height: 0px;
+	border-bottom: solid 5px #5C667F;
+}
+
+
+.photoContainer > img {
+	height: 600px;
+	width: 800px;
 }
