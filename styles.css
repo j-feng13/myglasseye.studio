@@ -10,15 +10,8 @@ header {
 	width: 100%;
 	justify-content: flex-start;
 	align-items: center;
-	transition: all 0.4s ease-in-out;
-	position: fixed;
-	overflow-y: hidden;
 	background-color: #74777F;
-}
-
-header:hover {
-	height: 30px;
-	border-bottom: none;
+	border-bottom: solid 2px #74777F;
 }
 
 header > .header_home {
@@ -32,12 +25,6 @@ header > .header_links {
 	justify-content: space-around;
 	flex-direction: row;
 }
-
-.header_collapse {
-	height: 0px;
-	border-bottom: solid 5px #5C667F;
-}
-
 
 .photoContainer > img {
 	height: 600px;

@@ -47,37 +47,7 @@ function init(photoListFile) {
 	});
 }
 
-function headerScrollHandler(headerEle) {
-	const headerEle = document.querySelector('header');
-	let ticking = false;
-	let evtScrollPosition;
-	evtScrollPosition = window.scrollY;
-	if(!ticking) {
-		window.requestAnimationFrame(() => {
-			if (evtScrollPosition > 50) {
-				headerEle.classList.add('header_collapse');
-			} else {
-				headerEle.classList.remove('header_collapse');
-			}
-
-			ticking = true;
-		});
-	};
-}
-
-function headerClickHandler(headerEle) {
-	const headerEle = document.querySelector('header');
-	const headerEle = document.querySelector('header');
-	headerEle.classList.remove('header_collapse');
-}
-
-function attachHeaderHandlers() {
-	window.addEventListener('scroll', headerScrollHandler);
-	headerEle.addEventListener('hover', headerClickHandler);	
-}
-
 window.addEventListener('load', () => {
 	init('main_feed.json');
-	attachHeaderHandlers();
 });
 
