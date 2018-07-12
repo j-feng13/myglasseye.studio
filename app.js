@@ -46,4 +46,7 @@ function init(photoListFile) {
 	});
 }
 
-window.addEventListener('load', () => { init('main_feed.json'); });
+window.addEventListener('load', () => {
+	init('main_feed.json');
+});
+

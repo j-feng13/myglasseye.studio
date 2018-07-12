@@ -1,3 +1,27 @@
 body {
-	background-color: #f0f8ff
+	background-color: #C9D8FF;
+	margin: 0;
+	color: #E8EEFF;
+}
+
+header {
+	display: flex;
+	height: 30px;
+	width: 100%;
+	justify-content: flex-start;
+	align-items: center;
+	background-color: #74777F;
+	border-bottom: solid 2px #74777F;
+}
+
+header > .header_home {
+	flex-grow: 10;
+	align-self: flex-start;
+	padding: 0 1em;
+}
+
+header > .header_links {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
 }
