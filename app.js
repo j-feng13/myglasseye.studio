@@ -1,4 +1,5 @@
 const PHOTO_URL = 'http://photos.myglasseye.studio';
+const CONTAINER = '.container_feed';
 
 function getPhotoList(documentPath) {
 	return fetch(documentPath, {
@@ -39,7 +40,7 @@ function renderPhotoList(targetElement, photoList) {
 }
 
 function init(photoListFile) {
-	const targetElement = document.querySelector('body');
+	const targetElement = document.querySelector(CONTAINER);
 	getPhotoList(photoListFile)
 	.then((photoList) => {
 		renderPhotoList(targetElement, photoList)
