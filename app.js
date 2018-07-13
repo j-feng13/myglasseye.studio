@@ -1,4 +1,5 @@
 const PHOTO_URL = 'http://photos.myglasseye.studio';
+const CONTAINER = '.container_feed';
 
 function getPhotoList(documentPath) {
 	return fetch(documentPath, {
@@ -9,13 +10,12 @@ function getPhotoList(documentPath) {
 	});
 }
 
-function createDivContainer(title, description, img) {
+function createDivContainer(headerEle, imgEle, descriptionEle) {
 	const div = document.createElement('div');
-	const headerText = document.createTextNode(title);
-	const descriptionText  = document.createTextNode(description);
-	div.appendChild(headerText);
-	div.appendChild(descriptionText);
-	div.appendChild(img);
+	div.classList.add('container_photo');
+	div.appendChild(headerEle);
+	div.appendChild(imgEle);
+	div.appendChild(descriptionEle);
 	return div;
 }
 
@@ -26,12 +26,30 @@ function createImgEle(image) {
 	return img;
 }
 
+function createImgHeader(title) {
+	const h1 = document.createElement('h1');
+	const textNode = document.createTextNode(title);
+	h1.classList.add('container_photo_title');
+	h1.appendChild(textNode);
+	return h1;
+}
+
+function createImgDescription(description) {
+	const p = document.createElement('p');
+	const textNode = document.createTextNode(description);
+	p.classList.add('container_photo_description');
+	p.appendChild(textNode);
+	return p;	
+}
+
 function renderPhotoList(targetElement, photoList) {
 	const fragment = document.createDocumentFragment();
 	photoList.map((photoItem) => {
 		const { image, title, description } = photoItem;
-		const img = createImgEle(image);
-		const container = createDivContainer(title, description, img);
+		const headerEle = createImgHeader(title);
+		const imgEle = createImgEle(image);
+		const descriptionEle = createImgDescription(description);
+		const container = createDivContainer(headerEle, imgEle, descriptionEle);
 		fragment.appendChild(container);
 	});
 
@@ -39,7 +57,7 @@ function renderPhotoList(targetElement, photoList) {
 }
 
 function init(photoListFile) {
-	const targetElement = document.querySelector('body');
+	const targetElement = document.querySelector(CONTAINER);
 	getPhotoList(photoListFile)
 	.then((photoList) => {
 		renderPhotoList(targetElement, photoList)

@@ -91,3 +91,8 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 3. Add a class if so. Remove otherwise
 4. Add a hover handler
 5. Make sure to move content down a bit at first to prevent overlapping
+
+## Styling 7/12
+1. Remove sticky headers. This is sort of dumb
+2. Flex that image feed
+3. `width: 100%; height: auto` preserves image aspect ratio
