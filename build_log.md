@@ -108,3 +108,10 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 2. Flex / responsive
 3. Minimal spacing between items
 4. Instagram-like without being too clustered
+
+### Title and Descriptions
+#### Adding fonts
+1. wow these are expensive
+2. Google fonts are great
+3. The National uses sans serif geometric fonts 
+	* I use Google Font Muli
