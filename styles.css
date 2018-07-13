@@ -1,7 +1,16 @@
+/*
+Color Palette
+Light Grey: EBF9FF;
+Medium Grey: #757C7F;
+Light Blue: #BCEAFF;
+Dark Blue: 5F767F;
+Neutral Grey: BCC7CC;
+*/
+
 body {
-	background-color: #C9D8FF;
+	background-color: #BCC7CC;
 	margin: 0;
-	color: #E8EEFF;
+	color: #EBF9FF;
 }
 
 header {
@@ -10,8 +19,8 @@ header {
 	width: 100%;
 	justify-content: flex-start;
 	align-items: center;
-	background-color: #74777F;
-	border-bottom: solid 2px #74777F;
+	background-color: #757C7F;
+	border-bottom: solid 2px #757C7F;
 }
 
 header > .header_home {
@@ -24,4 +33,30 @@ header > .header_links {
 	display: flex;
 	justify-content: space-around;
 	flex-direction: row;
+}
+
+.container_photo {
+	width: 650px;
+	height: 650px;
+	background-color: #BCEAFF;
+	display: flex;
+	margin: 2em 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.container_photo > img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.container_feed {
+	width: 80%;
+	height: 100%;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	display: flex;
+	margin: 0 auto;
 }
