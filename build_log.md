@@ -96,3 +96,9 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 1. Remove sticky headers. This is sort of dumb
 2. Flex that image feed
 3. `width: 100%; height: auto` preserves image aspect ratio
+
+### Header
+1. Should be bold - Copy the color scheme from the national
+3. Should have `Home` and `About`
+	- `Feeds` and Other pages can be added later
+4. Make everything centered and larger
