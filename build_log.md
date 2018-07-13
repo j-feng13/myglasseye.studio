@@ -102,3 +102,9 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 3. Should have `Home` and `About`
 	- `Feeds` and Other pages can be added later
 4. Make everything centered and larger
+
+### Grid
+1. Should be simple
+2. Flex / responsive
+3. Minimal spacing between items
+4. Instagram-like without being too clustered
