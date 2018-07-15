@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>My Glass Eye</title>
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<link rel="stylesheet" href="styles_about.css">
+</head>
+<body>
+	<header>
+		<a href="/">Home</a>
+		<a href="/feed">Feed</a>
+		<a href="/about">About</a>
+	</header>
+	<section class="container_about">
+		<img src="http://photos.myglasseye.studio/about.jpg" class="about_img">
+		<p>
+			I'm an amateur photographer based in Chicago. I shoot with film sometimes.
+			I enjoy city landscapes, and I rarely focus on people as more than a feature of the scene.
+		</p>
+		<p>
+			All of my photos are edited. I enjoy the technical aspects of photography, especially
+			pushing photos in post-production.
+		</p>
+		<p>
+			Email: me@myglasseye.studio
+		</p>
+	</section>
+</body>
+</html>
