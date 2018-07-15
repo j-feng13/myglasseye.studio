@@ -114,7 +114,7 @@ Requirements
 1. Create a flex container
 2. Set a fixed sized for each square element
 3. Dynamically size the photo with `width: 100%, height: auto`
-4. Fidget with flex as necessary 
+4. Fidget with flex as necessary
 
 ### Title and Descriptions
 #### Adding fonts
@@ -125,3 +125,7 @@ Requirements
 4. Fonts are easy to add by hotlinking the CDN
 
 ## Blur filter on the descriptions 7/14
+1. Create a linear-gradient of the same size in the same location
+2. Have it fade to opaque white.
+3. ???
+4. Fidget with the exact values
