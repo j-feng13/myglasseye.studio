@@ -124,8 +124,13 @@ Requirements
 	* I use Google Font Muli
 4. Fonts are easy to add by hotlinking the CDN
 
-## Blur filter on the descriptions 7/14
+## Styling 7/14
+
+### Blur filter on the descriptions
 1. Create a linear-gradient of the same size in the same location
 2. Have it fade to opaque white.
 3. ???
 4. Fidget with the exact values
+
+### Title
+1. Nothing special
