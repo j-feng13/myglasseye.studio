@@ -35,11 +35,19 @@ function createImgHeader(title) {
 }
 
 function createImgDescription(description) {
-	const p = document.createElement('p');
+	const div = document.createElement('div');
+	const textGradient = createTextGradient();
 	const textNode = document.createTextNode(description);
-	p.classList.add('container_photo_description');
-	p.appendChild(textNode);
-	return p;	
+	div.classList.add('container_photo_description');
+	div.appendChild(textGradient);
+	div.appendChild(textNode);
+	return div;	
+}
+
+function createTextGradient() {
+	const div = document.createElement('div')
+	div.classList.add('container_description_blur');
+	return div;
 }
 
 function renderPhotoList(targetElement, photoList) {
