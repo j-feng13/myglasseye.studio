@@ -94,20 +94,27 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 
 ## Styling 7/12
 1. Remove sticky headers. This is sort of dumb
-2. Flex that image feed
-3. `width: 100%; height: auto` preserves image aspect ratio
 
 ### Header
-1. Should be bold - Copy the color scheme from the national
-3. Should have `Home` and `About`
-	- `Feeds` and Other pages can be added later
-4. Make everything centered and larger
+Requirements
+	* Should be bold - Copy the color scheme from the national
+	* Should have `Home` and `About`
+	 `Feeds` and Other pages can be added later
+	* Make everything centered and larger
+1. Flex direction row
+2. Let `Home` use `flex-grow: 10` to simulate a `12-column` layout
 
 ### Grid
-1. Should be simple
-2. Flex / responsive
-3. Minimal spacing between items
-4. Instagram-like without being too clustered
+Requirements
+	* Should be simple
+	* Flex / responsive
+	* Minimal spacing between items
+	* Instagram-like without being too clustered
+	*
+1. Create a flex container
+2. Set a fixed sized for each square element
+3. Dynamically size the photo with `width: 100%, height: auto`
+4. Fidget with flex as necessary 
 
 ### Title and Descriptions
 #### Adding fonts
@@ -115,3 +122,6 @@ A JSON file with images and text will be used instead of using API Gateway -> La
 2. Google fonts are great
 3. The National uses sans serif geometric fonts 
 	* I use Google Font Muli
+4. Fonts are easy to add by hotlinking the CDN
+
+## Blur filter on the descriptions 7/14
