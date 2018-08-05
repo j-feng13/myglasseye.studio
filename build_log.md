@@ -129,3 +129,15 @@ Requirements
 2. Have it fade to opaque white.
 3. ???
 4. Fidget with the exact values
+
+## 7/15
+### About Page
+1. Upload `about.html` to S3 bucket `myglasseye.studio`
+2. Convert `about.jpg` to a progressive jpg
+	* install imagemagick [LINK](https://www.imagemagick.org/script/install-source.php)
+		* yak shave and read about FHS and where to install things on Linux [FHS](https://www.imagemagick.org/script/install-source.php)
+		* give up because it's missing the jpg delegate
+		* use some free online tool instead
+3. Create a new CSS file `styles_about.css`
+4. rename `about.html` to `about` and set the `Content-Type` to `text/html` in S3 for cleaner URLs
+5. I hope I pick up some better design skills
