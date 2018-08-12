@@ -155,11 +155,14 @@ Requirements
 1. Pull the docker amazonlinux image
 	- `docker pull amazonlinux`
 2. Run and mount the amazon image
-	- `docker run --volume=/home/jfeng/Projects/myglasseye.studio/image_resize_lambda amazonlinux /bin/bash`
+	- created image `zipInstalled` that has zip installed because default image does not
+	- `docker run --volume=/home/jfeng/Projects/myglasseye.studio/image_resize_lambda:/app -it zipInstalled /bin/bash`
 3. Install the necessary libraries in a virtual environment
 4. zip up the requirements and app
-	- `cd $VIRTUAL_ENV/lib/python3.6/site-packages && zip -r9 __project_name__` and `zip -g __projectName__.zip app.py`
-5. Upload to AWS lambda
+	- `cd $VIRTUAL_ENV/lib/python3.6/site-packages && zip -r9 lambdafunc.zip ./` and `zip -g lambdafunc.zip app.py`
+5. copy the file out
+	- `docker cp zipInstalled:/app/lambdafunc.py ./`
+6. Upload to AWS lambda
 
 ## 8/11
 ### New File Naming Scheme
