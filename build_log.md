@@ -143,3 +143,26 @@ Requirements
 3. Create a new CSS file `styles_about.css`
 4. rename `about.html` to `about` and set the `Content-Type` to `text/html` in S3 for cleaner URLs
 5. I hope I pick up some better design skills
+
+## 8/06
+### Image manipulation
+1. following this guide for code - http://deployeveryday.com/2017/07/25/building-image-resizer-serverless.html
+2. following this guide for build - https://docs.aws.amazon.com/lambda/latest/dg/with-s3-example-deployment-pkg.html
+3. Lambda functions do not get any sort of env settings or context. Hard code all of the settings
+
+## 8/07
+### How to create docker build environment for AWS
+1. Pull the docker amazonlinux image
+	- `docker pull amazonlinux`
+2. Run and mount the amazon image
+	- `docker run --volume=/home/jfeng/Projects/myglasseye.studio/image_resize_lambda amazonlinux /bin/bash`
+3. Install the necessary libraries in a virtual environment
+4. zip up the requirements and app
+	- `cd $VIRTUAL_ENV/lib/python3.6/site-packages && zip -r9 __project_name__` and `zip -g __projectName__.zip app.py`
+5. Upload to AWS lambda
+
+## 8/11
+### New File Naming Scheme
+- New images will be uploaded in scheme `new_IMAGE_NAME.jpg`
+- AWS Lambda will resize the image into `IMAGE_NAME/small.jpg` and `IMAGE_NAME/large.jpg`
+- Optional files are `IMAGE_NAME/before.jpg` and `IMAGE_NAME/notes.jpg`
