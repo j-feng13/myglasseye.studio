@@ -122,7 +122,7 @@ Requirements
 2. Google fonts are great
 3. The National uses sans serif geometric fonts 
 	* I use Google Font Muli
-4. Fonts are easy to add by hotlinking the CDN
+4. Fonts are easy to add by hotlinking the CDNl
 
 ## Styling 7/14
 
@@ -155,13 +155,15 @@ Requirements
 1. Pull the docker amazonlinux image
 	- `docker pull amazonlinux`
 2. Run and mount the amazon image
-	- created image `zipInstalled` that has zip installed because default image does not
-	- `docker run --volume=/home/jfeng/Projects/myglasseye.studio/image_resize_lambda:/app -it zipInstalled /bin/bash`
+	- `docker run --volume=/home/jfeng/Projects/myglasseye.studio/image_resize_lambda:/app --rm -it amazonlinux /bin/bash`
 3. Install the necessary libraries in a virtual environment
+	- `yum install zip`
+	- `yum install python3`
+	- `python3 -m pip install -r requirements.txt`
 4. zip up the requirements and app
-	- `cd $VIRTUAL_ENV/lib/python3.6/site-packages && zip -r9 lambdafunc.zip ./` and `zip -g lambdafunc.zip app.py`
+	- `cd $VIRTUAL_ENV/lib/python3.6/site-packages && zip -r9 lambdafunc.zip ./` and `zip -g lambdafunc.zip /app/app.py`
 5. copy the file out
-	- `docker cp zipInstalled:/app/lambdafunc.py ./`
+	- `docker cp zipInstalled:/app/lambdafunc.zip ./`
 6. Upload to AWS lambda
 
 ## 8/11
