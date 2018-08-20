@@ -19,9 +19,9 @@ function createDivContainer(headerEle, imgEle, descriptionEle) {
 	return div;
 }
 
-function createImgEle(image) {
+function createImgEle(key, image) {
 	const img = document.createElement('img');
-	img.src = PHOTO_URL + image;
+	img.src = `${PHOTO_URL}/${key}${image}/small.jpg`;
 	img.crossorigin = 'anonymous'
 	return img;
 }
@@ -51,11 +51,12 @@ function createTextGradient() {
 }
 
 function renderPhotoList(targetElement, photoList) {
+	const { key, photos } = photoList;
 	const fragment = document.createDocumentFragment();
-	photoList.map((photoItem) => {
+	photos.map((photoItem) => {
 		const { image, title, description } = photoItem;
 		const headerEle = createImgHeader(title);
-		const imgEle = createImgEle(image);
+		const imgEle = createImgEle(key, image);
 		const descriptionEle = createImgDescription(description);
 		const container = createDivContainer(headerEle, imgEle, descriptionEle);
 		fragment.appendChild(container);
