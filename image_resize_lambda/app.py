@@ -14,7 +14,7 @@ def lambda_handler(event, context):
         object_key = key['s3']['object']['key']
 
         # Split the key name into `new_` and `IMAGE_NAME.jpg` Then remove `.jpg`
-        key_prefix = object_key.split('_', 1)[1][:-4]
+        key_prefix = "main_feed/" + object_key.split('_', 1)[1][:-4]
 
         obj = s3.Object(
             bucket_name=s3_bucket,
