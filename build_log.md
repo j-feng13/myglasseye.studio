@@ -171,3 +171,7 @@ Requirements
 - New images will be uploaded in scheme `new_IMAGE_NAME.jpg`
 - AWS Lambda will resize the image into `IMAGE_NAME/small.jpg` and `IMAGE_NAME/large.jpg`
 - Optional files are `IMAGE_NAME/before.jpg` and `IMAGE_NAME/notes.jpg`
+
+## 8/19
+### IAM Role permissions
+- Lambda function needs PutObject, GetObject, and DeleteObject on all things inside of `myglasseye.studio.photos/*`
