@@ -70,7 +70,10 @@ function init(photoListFile) {
 	getPhotoList(photoListFile)
 	.then((photoList) => {
 		renderPhotoList(targetElement, photoList)
+	})
+	.catch((err) => {
+		console.log(err);
 	});
 }
 
-init('main_feed.json');
+document.addEventListener('DOMContentLoaded', init.bind(null, 'main_feed.json'));
