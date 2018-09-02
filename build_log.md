@@ -175,3 +175,10 @@ Requirements
 ## 8/19
 ### IAM Role permissions
 - Lambda function needs PutObject, GetObject, and DeleteObject on all things inside of `myglasseye.studio.photos/*`
+
+## 9/1
+### Image Pop up
+- Add `types` field to `main_feed.json` entries to know if there is a `before` image and other types
+- Remember how much I hate manually making modals
+- Take inspiration from [LINK](https://www.sitepoint.com/make-a-simple-javascript-slideshow-without-jquery/)
+- Feel really horrible and wish you were using a framework
