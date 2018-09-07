@@ -97,8 +97,8 @@ function attachCarouselControls(ele, count) {
 
 function showModal(key, image, description, types) {
 	const modalEle = document.querySelector(MODAL);
-	const modal.classList.add('modal_visible');
-	const imageContainerEle = modalEle.querySelector('.modal_carousal');
+	modalEle.classList.add('modal_visible');
+	const imageContainerEle = modalEle.querySelector('.modal_carousel');
 	const descriptionEle = modalEle.querySelector('.modal_description');
 
 	descriptionEle.textContent = description;
