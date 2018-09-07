@@ -95,13 +95,6 @@ function attachCarouselControls(ele, count) {
 	right.addEventListener('click', handleCarouselClick.bind(scope, right, 1, count));
 }
 
-function filterCarouselTypes(types) {
-	const smallIndex = types.indexOf('small');
-	types.slice(smallIndex, 1);
-	return types;
-}
-
-
 function showModal(key, image, description, types) {
 	const modalEle = document.querySelector(MODAL);
 	const modal.classList.add('modal_visible');
@@ -109,9 +102,8 @@ function showModal(key, image, description, types) {
 	const descriptionEle = modalEle.querySelector('.modal_description');
 
 	descriptionEle.textContent = description;
-	const carouselTypes = filterCarouselTypes(types);
-	attachCarouselImages(imageContainerEle, key, image, carouselTypes);
-	attachCarouselControls(modalEle, carouselTypes.length - 1);
+	attachCarouselImages(imageContainerEle, key, image, types);
+	attachCarouselControls(modalEle, types.length - 1);
 }
 
 function renderPhotoList(targetElement, photoList) {
