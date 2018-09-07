@@ -58,9 +58,10 @@ function attachCarouselImages(ele, key, image, types) {
 	for (let type of types) {
 		const img = document.createElement('img');
 		img.classList.add('modal_carousel_image');
-		img.src = `${baseImageUrl}/${type}`;
+		img.src = `${baseImageUrl}/${type}.jpg`;
 		img.crossorigin = 'anonymous';
-	}	imgListFragment.appendChild(img);
+		imgListFragment.appendChild(img);
+	}
 
 	ele.appendChild(imgListFragment);
 }
