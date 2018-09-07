@@ -5,61 +5,61 @@
 			"image": "/DSC_0823",
 			"title": "Into the light",
 			"description": "A couple holding hands stares into the sun",
-			"types": ["small", "large", "before"]
+			"types": ["large", "before"]
 		},
 		{
 			"image": "/ETP_1264",
 			"title": "City Life",
 			"description": "Luck, heavy fog, and a lot of editing",
-			"types": ["small", "large", "before"]
+			"types": ["large", "before"]
 		},
 		{
 			"image": "/JF0_3536",
 			"title": "A Peaky Bird",
 			"description": "A flamingo rears its head in the concrete jungle",
-			"types": ["small", "large", "before"]
+			"types": ["large", "before"]
 		},
 		{
 			"image": "/JF0_3570",
 			"title": "Construction Views",
 			"description": "They're blocking my view with a new high rise",
-			"types": ["small", "large", "before"]
+			"types": ["large", "before"]
 		},
 		{
 			"image": "/JF0_5839",
 			"title": "Split",
 			"description": "Testing out a new lens",
-			"types": ["small", "large", "before"]
+			"types": ["large", "before"]
 		},
 		{
 			"image": "/JF0_6236",
 			"title": "Late Nights",
 			"description": "Departing train shows unexpected colors",
-			"types": ["small", "large", "before"]
+			"types": ["large", "before"]
 		},
 		{
 			"image": "/JF0_6648",
 			"title": "Escalate",
 			"description": "No one likes this photo",
-			"types": ["small", "large", "before"]
+			"types": ["large", "before"]
 		},
 		{
 			"image": "/JF0_7394",
 			"title": "Isosceles",
 			"description": "Really good tones here",
-			"types": ["small", "large", "before"]
+			"types": ["large", "before"]
 		},
 		{
 			"image": "/JF0_7631",
 			"title": "Twilight Zone",
 			"description": "Fog is rewarding",
-			"types": ["small", "large", "before"]
+			"types": ["large", "before"]
 		},
 		{
 			"image": "/JF0_7871",
 			"title": "Glass",
 			"description": "Water has a really good texture",
-			"types": ["small", "large", "before"]
+			"types": ["large", "before"]
 		}
 	]
 }
