@@ -51,6 +51,13 @@ function createTextGradient() {
 	return div;
 }
 
+function clearPreviousCarousel(ele) {
+	const images = ele.querySelectorAll('img');
+	images.forEach((image) => {
+		image.remove();
+	});
+}
+
 function attachCarouselImages(ele, key, image, types) {
 	const baseImageUrl = PHOTO_URL + key + image;
 	const imgListFragment = document.createDocumentFragment();
@@ -102,6 +109,7 @@ function showModal(key, image, description, types) {
 	const descriptionEle = modalEle.querySelector('.modal_description');
 
 	descriptionEle.textContent = description;
+	clearPreviousCarousel(imageContainerEle);
 	attachCarouselImages(imageContainerEle, key, image, types);
 	attachCarouselControls(modalEle, types.length - 1);
 }
