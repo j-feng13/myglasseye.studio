@@ -101,6 +101,23 @@ header a:active {
 	background: linear-gradient(transparent, white);
 	position: absolute;
 	width: 650px;
-	z-index: 9999;
+	z-index: 99;
 	height: 3em;
+}
+
+.modal {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(150,150,150, .8);
+	z-index: 999;
+}
+
+.hidden {
+	display: none;
 }
